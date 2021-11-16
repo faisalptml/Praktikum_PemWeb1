@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styling.css">
+    <title>Checkout-Success</title>
+    <style>
+        body{
+            max-width: 1000px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        header{
+            background-color: lightgray;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 2px solid black;
+        }
+        main{
+            width: 60%;
+        }
+        aside{
+            width: 335px;
+            height: 300px;
+            background-color:grey;
+            padding: 10px;
+            display: grid;
+            align-items:center;
+            padding-right: 2px;
+        }
+        .list{
+            margin-right: 50px;
+            display: flex;
+            list-style-type: none;
+            gap: 10px;
+        }
+        .pict{
+            width: 20px;
+            vertical-align: sub;
+        }
+        .side{
+            font-size: large;
+            font-family: serif;
+        }
+        .search{
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            gap: 10px;
+        }
+        .square{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 3%;
+        }
+        .gift{
+            font-size: 17px;
+            margin-bottom: -2%;
+            margin-top: 0%;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="list">
+          <li>
+            <img class="pict" src="assets/checked-.png" alt=""/>
+            <b class="side">Site Name</b>
+          </li>
+        </ul>
+
+        <ul class="category">
+          <li>
+            <!-- Home -->
+            <a href="/">Category 1</a> |
+          </li>
+          <li>
+            <!--- Current -->
+            <a href="/events">Category 2</a> |
+          </li>
+          <li>
+            <!-- Contact -->
+            <a href="/contact">Category 3</a>
+          </li>
+        </ul>
+
+        <ul class="search">
+          <li>
+            <img class="pict1" src="assets/search.png" alt="">
+          </li>
+          <li class="floats">
+            <img class="pict1" src="assets/trolley.png" alt="">
+            <p class="side"> Cart(1)</p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="shot">
+      <main>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="floats">
+                        <img class="pict2" src="assets/check.png" alt="">
+                        <p class="graph">
+                            Order 131217321<br>
+                            <b>Thank you, Kenny!</b>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr/>
+            <p class="cool">You order is a confirmed.</p>
+            <p class="cool">We've accepted your order and we're getting it ready.</p>
+            <hr/>
+        <h2>Costumer Information</h2>
+        <table class="square">
+            <thead>
+                <tr>
+                    <td><b>Shipping Address</b></td>
+                    <td><b>Billing Address</b></td>
+                </tr>
+                <tr>
+                    <td>Kenny Bostick</td>
+                    <td>Kenny Bostick</td>
+                </tr>
+                <tr>
+                    <td><a href=" ">12 Waldo Point Road<br>
+                        Mishauken, NY 11200<br>
+                        United states</a></td>
+                    <td><a href=" ">12 Waldo Point Road<br>
+                        Mishauken, NY 11200<br>
+                        United states</a></td>
+                </tr>
+            </thead>
+        </table>
+        <table class="square">
+          <thead>
+            <tr class="turn">
+              <td><b>Shipping Method</b></td>
+              <td><b>Payment Method</b></td>
+            </tr>
+            <tr>
+            <td>UPS Ground (Estimated ship<br>
+             time of 3-6 days)</td>
+            <td><img src="assets/visa.png" alt="" class="pict3">Ending in 3217 - $23.60 </td>
+            </tr>
+          </thead>
+        </table>
+      </main>
+
+      <aside>
+        <h2 style="margin-bottom: 0%;">Summary ( 1 item )</h2>
+        <table class="nine">
+          <tr class="zero">
+            <td class="zero"><b>Subtotal</b></td>
+            <td style="text-align: end"><b>$20.00</b></td>
+          </tr>
+          <tr class="zero">
+            <td class="zero"><b>Shipping</b></td>
+            <td style="text-align: end"><b>$2.20</b></td>
+          </tr>
+          <tr class="zero">
+            <td class="liner"><b>Est. Taxes</b></td>
+            <td class="line"><b>$1,04</b></td>
+          </tr>
+        </table>
+        <p class="gift">Gift card or discount code</p>
+            <form method="post" id="form">
+                <input id="answer" type="text"/>
+                <button type="submit" class="button">Apply</button>
+            </form>
+        <table class="nine">
+          <tr class="zero">
+            <td class="liner"><b>TOTAL</b></td>
+            <td class="line"><b>$23.60</b></td>
+          </tr>
+        </table>
+      </aside>
+    </div>
+    <footer class="foot">
+      <div class="baris">
+        <b>site name</b>
+        <a href="">Category X</a> | <a href="">Category Y</a> |
+        <a href="">Category Z</a>
+        <h4 class="header">Stay In Touch! Join our Newslatter.</h4>
+      </div>
+      <div id="cut">
+        <img class="pict4" src="assets/visa.png" alt=""/>
+        <img class="pict4" src="assets/global.png" alt=""/>
+        <img class="pict4" src="assets/rectangle.png" alt=""/>
+        <div id="last">
+          <input class="end" type="text" placeholder="Enter Email" />
+          <button class="push">subcribe</button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

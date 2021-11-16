@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Pizza</title>
+</head>
+<body>
+    <div style="background-color:coral; width: 730px; color:black; margin: 25px auto; padding:20px; font-family:'Times New Roman', Times, serif;">
+        <h1><strong>Black Goose Bistro | Pizza-on-Demand</strong></h1>
+        <h3>The 12" wood-fired pizza is available at Coura's Bistro and we have it delivered. 
+            Create your custom pizza here and we'll have it delivered within the hour.</h3>
+
+        <!--Awal informasi user-->
+        <p>Your Information</p>
+        <form action="http://blackgoosebistro.com/pizza.php" method="POST">
+            <label>Name:</label>
+            <input type="text" name="customername">
+            <br>
+            <label>Address:</label>
+            <input type="text" name="address" style="margin-top: 10px;">
+            <br>
+            <label>Phone Number:</label>
+            <input type="number" name="telephone" style="margin-top: 10px;">
+            <br>
+            <label>Email:</label>
+            <input type="email" name="email" style="margin-top: 10px; margin-bottom: 10px;">
+            <br>
+            <label>Delivery Instructions:</label>
+            <br>
+            <textarea name="instructions" cols="40" rows="5" placeholder="No more than 400 characters long"></textarea>
+        <!--Akhir informasi user-->
+
+        <!--Awal Desain pizza-->
+        <table style="margin-top: 10px;">
+            <tr>
+                <td><b>Desain Your Dream Pizza:</b></td>
+            </tr>
+            <tr>
+                <td>Pizza Specs</td>
+            </tr>
+        </table>
+        <br>
+            <label>Crust (Choose one):</label>
+            <br>
+            <input type="radio" name="crust" value="Classic White" style="margin-left: 20px;">Classic White
+            <br>
+            <input type="radio" name="crust" value="Miltigrain" style="margin-left: 20px;">Multigrain
+            <br>
+            <input type="radio" name="crust" value="Cheese-stupped crust" style="margin-left: 20px;">Cheese-stupped crust
+            <br>
+            <input type="radio" name="crust" value="Gluten-free" style="margin-left: 20px;">Gluten-free
+            <br>
+            <label>Toppings (Choose as many as you want):</label>
+            <br>
+            <input type="checkbox" name="toppings[]" value="Red Sauce" style="margin-left: 20px;">Red Sauce
+            <br>
+            <input type="checkbox" name="toppings[]" value="White Sauce" style="margin-left: 20px;">White Sauce
+            <br>
+            <input type="checkbox" name="toppings[]" value="Mozzarella Cheese" style="margin-left: 20px;">Mozzarella Cheese
+            <br>
+            <input type="checkbox" name="toppings[]" value="Mushrooms" style="margin-left: 20px;">Mushrooms
+            <br>
+            <input type="checkbox" name="toppings[]" value="Anchovies" style="margin-left: 20px;">Anchovies
+            <br>
+            <input type="checkbox" name="toppings[]" value="Peppers" style="margin-left: 20px;">Peppers
+            <br>
+            <input type="checkbox" name="toppings[]" value="Pepperoni" style="margin-left: 20px;">Pepperoni
+        <!--Akhir Desain Pizza-->
+
+        <!--Awal Jumlah pizza yang dipesan-->
+                    <p style="margin-bottom: 0px;">Number</p>
+                    <label>How many pizzas:</label>
+                    <select name="pizzas">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+        <!--Akhir jumlah pizza yan dipesan-->
+            <br>
+        <!--tombol-->
+            <input type="submit" name="tombol" value="Bring me a pizza!" style="margin-top: 15px; border-radius: 15px;">
+            <input type="reset" name="tombol" value="Reset" style="border-radius: 15px;">
+        </form>
+        <!--akhir tombol-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+.row{
+    width: 900px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.column{
+    height: 200px;
+}
+.header{
+    width: 898px;
+    border: 1px solid black;
+    height: 150px;
+    background-color: #C3E339;
+    margin-bottom: 20px;
+}
+.kotak{
+    float: left;
+    width: 230px;
+    border: 1px solid black;
+    background-color: #E322A3;
+    margin-bottom: 20px;
+}
+.square1{
+    float: right;
+    width: 620px;
+    border: 1px solid black;
+    background-color: #0BE371;
+    margin-bottom: 20px;
+}
+.square2{
+    float: right;
+    width: 620px;
+    border: 1px solid black;
+    background-color: #9917E3;
+}

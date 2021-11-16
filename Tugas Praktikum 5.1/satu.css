@@ -1,0 +1,41 @@
+.row{
+    width: 900px;
+    height: 400px;
+    margin: auto;
+}
+.box1{
+    float: right;
+    background-color: #A366D9;
+    width: 20%;
+    height: 600px;
+    margin-right: 7%;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+.box2{
+    background-color: #72D950;
+    width: 20%;
+    float: right;
+    height: 600px;
+    margin-right: 20px;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+.box3{
+    background-color: #D9413B;
+    width: 20%;
+    height: 600px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+.box4{
+    background-color: tomato;
+    width: 20%;
+    float: right;
+    height: 600px;
+    margin-right: 20px;
+    margin-top: 30px;
+    border: 1px solid black;
+}

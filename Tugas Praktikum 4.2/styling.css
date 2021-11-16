@@ -1,0 +1,106 @@
+.category{
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+.pict1{
+    width: 30px;
+}
+.pict2{
+    width: 45px;
+}
+.pict3{
+    width: 20px;
+    float: left;
+    margin-left: 10pt;
+}
+.pict4{
+    width: 30px;
+    height: 30px;
+}
+.turn{
+    margin-right: 30%;
+}
+.graph{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.floats{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#shot{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.cool{
+    font-size: larger;
+}
+.nine{
+    width: 95%;
+}
+.zero{
+    padding: 10px;
+}
+.line{
+    padding: 10px;
+    text-align: end;
+    border-bottom: 2px solid white;
+}
+.liner{
+    padding: 10px 0;
+    border-bottom: 2px solid white;
+}
+#form{
+    align-items: center;
+    margin-top: 0px;
+    font-weight: bolder;
+}
+#answer{
+    font-weight: bolder;
+    border-color: black;
+    height: 20px;
+}
+.button{
+    background-color: lightgray;
+    height: 26px;
+    width: 35%;
+}
+.foot{
+    margin-top: 25px;
+    border-top: 1px solid black;
+    padding: 20px;
+    display: grid;
+    gap: 10px
+}
+.baris{
+    display: flex;
+    gap: 10px;
+}
+.header{
+    margin-left: 365px;
+    margin-bottom: 17px;
+    margin-top: 0px;
+}
+#cut{
+    display: flex;
+    gap: 5px;
+    margin-top: -3%;
+}
+#last{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-weight: bolder;
+}
+.end{
+    font-weight: bolder;
+    height: 15px;
+}
+.push{
+    background-color: #808080;
+    height: 20px;
+}

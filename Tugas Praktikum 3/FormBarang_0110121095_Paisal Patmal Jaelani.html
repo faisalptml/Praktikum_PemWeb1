@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form. Pemesanan Barang</title>
+    </head>
+    <body style="max-width: 1000px; border: 2px solid black; margin: auto; @media only screen and (max-width: 600px)">
+        <header style="background-color: lightgray; margin-top: -2%; padding-bottom: 20px;">
+            <h4 style="text-align: center; margin-bottom: 3px;">A Web Page</h4>
+            <div style="float: left;">
+                <img src="image/left-arrow.png" alt="" style="width: 25px; margin-bottom: 0%;">
+                <img src="image/right-arrow.png" alt="" style="width: 25px;">
+                <img src="image/icons8-delete-30.png" alt="" style="width: 25px;">
+                <img src="image/icons8-home-64.png" alt="" style="width: 25px;">
+            </div>
+            <input type="text" name="link" placeholder="http://" style="width: 750px; height: 20px; margin-left: 5px;">
+            <input type="search" name="cari" placeholder="search" style="border-radius: 10px; width: 95px; height: 26px;">   
+        </header>
+        <br>
+        <div style="padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 10px;">
+            <ul style="list-style-type: none; display: flex; border: 1px solid black; gap: 100px;">
+                <li>Home |</li>
+                <li>Generate Link |</li>
+                <li>Transaction History |</li>
+                <li>Policy |</li>
+                <li>Logout</li>
+            </ul>   
+        </div>
+        <div class="container" style="display: flex;">    
+            <div>
+                <aside style="width: 250px; margin-left: 70px;">
+                    <img src="image/selection.png" alt="" style="width: 145px; ">
+                    <button type="submit">Upload Picture</button>
+                </aside>
+            </div>
+            <div>
+                <form method="POST">
+                    <table>
+                        <tr>
+                            <td><label>Title Here</label></td>
+                            <td>:</td>
+                            <td><input type="text" name="title"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Description</label></td>
+                            <td>:</td>
+                            <td><textarea name="description" cols="30" rows="5"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label>Account Number</label></td>
+                            <td>:</td>
+                            <td><input type="number" name="UserAccount"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Bank</label></td>
+                            <td>:</td>
+                            <td><select name="bank">
+                                    <option value="bank">HSBC</option>
+                                    <option value="bank">BCA</option>
+                                    <option value="bank">BRI</option>
+                                    <option value="bank">BNI</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label>Account Holder</label></td>
+                            <td>:</td>
+                            <td><input type="text" name="holder"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Transaction</label></td>
+                            <td>:</td>
+                            <td><select name="transaction">
+                                    <option value="transaction">1</option>
+                                    <option value="transaction">2</option>
+                                    <option value="transaction">3</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>*if the transaction is for 3 person, choose 3 from the drop-down list</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="color: green;"><input type="checkbox"/>Send to Mobile Phone</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="color: green;"><input type="checkbox"/>Send to Email</td>
+                        </tr>
+                        <tr>
+                            <td><label for="sendphone">Send to Mobile Phone</label></td>
+                            <td>:</td>
+                            <td><input type="number" name="Number" id="sendphone"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="sendmail">Send to Email</label></td>
+                            <td>:</td>
+                            <td><input type="email" name="Email" id="sendmail"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><button type="submit" name="generate" style="color: white; background-color: green; align-content: center; margin-top: 20px;">Generate Nabr Link</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>        
+    </body>
+</html>
