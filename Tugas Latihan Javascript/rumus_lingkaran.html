@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumus Lingkaran</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: bisque;
+        }
+
+        div {
+            margin: auto;
+            padding-top: -70px;
+            width: 400px;
+            margin-top: 100px;
+        }
+
+        table{
+            border-style: none;
+            border-collapse: collapse;
+            width: 100px;
+        }
+
+        th {
+            padding: 5px;
+            border: none;
+            font-size: 18px;
+        }
+
+        td {
+            border: none;
+        }
+
+        input[type=text] {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 400px;
+            border-style: solid;
+            border-color: #6d6e6a;
+            font-size: 16px;
+        }
+
+        input[type=text]:disabled {
+            background-color: #fff;
+        }
+
+        button {
+            width: 100%;
+            height: 50px;
+            background-color: #48A845;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #239BA8;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Menghitung Luas & Keliling Lingkaran</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <tr><input type="text" id="first" placeholder="Masukan nilai jari-jari lingkaran"></tr>
+                </tr>
+                <tr>
+                    <td><button onclick="hitung()">Hitung</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Luas Lingkaran</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="second" disabled></td>
+                </tr>
+                <tr>
+                    <td>Keliling Lingkaran</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="third" disabled></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script>
+        const phi = 3.14;
+        var luas;
+        var keliling;
+        var r;
+        var d;
+
+        function hitung() {
+            r = parseFloat(document.getElementById("first").value);
+            luas = phi * Math.pow(r,2)
+            d = 2 * r;
+            keliling = phi * d
+            document.getElementById("second").value = luas;
+            document.getElementById("third").value = keliling;
+        }
+    </script>
+</body>
+</html>

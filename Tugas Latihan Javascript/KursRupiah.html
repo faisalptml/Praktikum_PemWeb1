@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+
+    <style>
+        body {
+            background-color: khaki;
+        }
+
+        div {
+            margin: auto;
+            padding-top: -70px;
+            width: 550px;
+            margin-top: 120px;
+    }
+
+    table {
+        border: 1px solid black;
+        padding: 20px;
+        background-color: cornflowerblue;
+    }
+
+    input, select {
+        background-color: rgb(219, 221, 224);
+        border: 1px solid black;
+        width: 150px;
+    }
+
+    select {
+        width: 100px;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 style="text-align: center;">Menghitung Kurs Rupiah</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Masukan Nilai</th>
+                        <th>Mata Uang</th>
+                        <th>Nilai Rupiah</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" id="masukanAwal" onchange="tampilHasil()" placeholder="Masukan Nilai Dollar" style="margin: 0px 20px 0px 20px;">
+                        </td>
+                        <td>
+                            <select id="mataUang" onchange="tampilHasil()" >
+                                <option value="Dollar">Dollar</option>             
+                            </select>
+                        </td>
+                        <td>
+                            <input id="hasil" type="text" placeholder="Nilai Rupiah" style="margin: 0px 20px 0px 20px;">
+                        </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+    </div>
+
+    <script>
+        let masukanAwal = document.getElementById("masukanAwal")
+
+        let mataUang = document.getElementById("mataUang")
+
+        let hasil = document.getElementById("hasil")
+
+        let penampungHasil
+
+        let nf = new Intl.NumberFormat('id-ID');
+
+        function tampilHasil() {
+
+            if (mataUang.value == "Dollar") {
+                penampungHasil = masukanAwal.value * 14650
+
+            } else {
+                penampungHasil = masukanAwal * 0
+            }
+        
+            hasil.value = "Rp. " + nf.format(penampungHasil);
+
+        }
+    </script>
+</body>
+</html>
