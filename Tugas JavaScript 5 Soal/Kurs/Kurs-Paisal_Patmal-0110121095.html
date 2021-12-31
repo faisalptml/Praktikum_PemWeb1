@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Mata Uang</title>
+
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        fieldset {
+            background-color: rgba(218, 218, 204, 0.76);
+            width: 500px;
+        }
+
+        div {
+            margin: auto;
+            width: 650px;
+            margin-top: 160px;
+        }
+
+        input, select {
+            width: 150px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend><b>Kurs Rupiah - Mata Uang Asing</b></legend>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Masukan Nilai</th>
+                        <th>Valas</th>
+                        <th>Nilai Rupiah</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" id="nilaiAwal" onchange="tampilHasil()" placeholder="Masukan Nilai" style="margin: 0px 20px 0px 20px;">
+                        </td>
+                        <td>
+                            <select id="valasPilihan" onchange="tampilHasil()" >
+                                <option value="">Pilih valasnya</option>
+                
+                                <option value="Dollar US">Dollar US</option>
+                
+                                <option value="Dollar Singapura">Dollar Singapura</option>
+                
+                                <option value="Euro">Euro</option>
+                
+                                <option value="Ringgit">Ringgit</option>
+                
+                                <option value="Yen">Yen</option>
+                
+                                <option value="Riyal">Riyal</option>
+                
+                            </select>
+                        </td>
+                        <td>
+                            <input id="hasil" type="text" placeholder="Nilai Rupiah" style="margin: 0px 20px 0px 20px;">
+                        </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </fieldset>
+    </div>
+
+    <script>
+        let valas = [" Dollar US", "Dollar Singapura", "Ringgit", "Yen", "Euro", "Riyal"]
+
+        let nilaiAwal = document.getElementById("nilaiAwal")
+
+        let valasPilihan = document.getElementById("valasPilihan")
+
+        let hasil = document.getElementById("hasil")
+
+        let penampungHasil
+
+        let nf = new Intl.NumberFormat('id-ID');
+
+        function tampilHasil() {
+
+            if (valasPilihan.value == "Dollar US") {
+                penampungHasil = nilaiAwal.value * 9915
+
+            } else if (valasPilihan.value == "Dollar Singapura") {
+                penampungHasil = nilaiAwal.value * 13472
+
+            } else if (valasPilihan.value == valas[2]) {
+                penampungHasil = nilaiAwal.value * 874
+
+            } else if (valasPilihan.value == valas[3]) {
+                penampungHasil = nilaiAwal.value * 120
+
+            } else if (valasPilihan.value == valas[4]) {
+                penampungHasil = nilaiAwal.value * 15888
+
+            } else if (valasPilihan.value == valas[5]) {
+                penampungHasil = nilaiAwal.value * 3592
+
+            } else {
+                penampungHasil = nilaiAwal * 0
+            }
+        
+            hasil.value = "Rp. " + nf.format(penampungHasil);
+
+        }
+    </script>
+</body>
+</html>

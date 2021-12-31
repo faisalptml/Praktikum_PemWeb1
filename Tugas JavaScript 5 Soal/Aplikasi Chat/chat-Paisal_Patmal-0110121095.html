@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Chat</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: black;
+        }
+
+        .result_Chat {
+            width: 600px;
+            height: 250px;
+            z-index: 1;
+            border: 1px solid black;
+            overflow: auto;
+        }
+
+        button {
+            width: 70px;
+            z-index: 2;
+            position: absolute;
+            margin-top: -23px;
+            margin-left: 528px;
+        }
+
+        input{
+            width: 525px;
+            z-index: 3;
+            position: absolute;
+            margin-top: -23px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <main>
+            <h1>Aplikasi Chat</h1>
+            <div class="result_Chat" style="background-color: bisque; padding-left: 20px;"></div>
+            <div>
+                <input type="text" class="inputChat">
+                <button class="btn">Kirim</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let resultChat = document.querySelector(".result_Chat");
+        const inputanChat = document.querySelector(".inputChat");
+        const btnChat = document.querySelector(".btn");
+
+        btnChat.addEventListener("click", function() {
+            resultChat.innerHTML = resultChat.innerHTML + "<br>" + inputanChat.value;
+            inputanChat.value = "";
+        })
+    </script>
+</body>
+</html>
